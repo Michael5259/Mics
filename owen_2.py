@@ -11,13 +11,13 @@ GPG = gopigo3.GoPiGo3()
 lineFollow = easy_gpg.init_line_follower("AD1")
 
 while True:
-    if lineFollow.read("bivariate-str") == "wwwwww":
+    if lineFollow.read("bivariate-str") == "bbwwbb":
         GPG.set_motor_power(GPG.MOTOR_LEFT + GPG.MOTOR_RIGHT, 50)
-    elif lineFollow.read("bivariate-str") == "wwwwwb" or lineFollow.read("bivariate-str") == "wwwwbb" or lineFollow.read("bivariate-str") == "wwwbbb":
+    elif lineFollow.read("bivariate-str") == "bwwbbb" or lineFollow.read("bivariate-str") == "wwbbbb" or lineFollow.read("bivariate-str") == "wbbbbb":
         GPG.set_motor_power(GPG.MOTOR_LEFT, -50)
         GPG.set_motor_power(GPG.MOTOR_RIGHT, 50)
-    elif lineFollow.read("bivariate-str") == "bwwwww" or lineFollow.read("bivariate-str") == "bbwwww" or lineFollow.read("bivariate-str") == "bbbwww":
+    elif lineFollow.read("bivariate-str") == "bbbwwb" or lineFollow.read("bivariate-str") == "bbbbww" or lineFollow.read("bivariate-str") == "bbbbbw":
         GPG.set_motor_power(GPG.MOTOR_LEFT, 50)
         GPG.set_motor_power(GPG.MOTOR_RIGHT, -50)
     else:
-        GPG.set_motor_power(GPG.MOTOR_LEFT + GPG.MOTOR_RIGHT, 0)
+        GPG.set_motor_power(GPG.MOTOR_LEFT + GPG.MOTOR_RIGHT, 0)   
