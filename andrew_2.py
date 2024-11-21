@@ -16,7 +16,7 @@ color_sensor = easy_gpg.init_line_follower("AD1")
 GPG.set_motor_power(GPG.MOTOR_LEFT + GPG.MOTOR_RIGHT, 50)
 
 while(True):
-    data = GPG.read()
+    data = color_sensor.read()
     left = sum(data[3:])
     right = sum(data[:3])
     if right > left:
