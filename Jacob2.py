@@ -11,8 +11,8 @@ GPG = gopigo3.GoPiGo3()
 lineFollow = easy_gpg.init_line_follower("AD1")
 
 while True:
-	right = (lineFollow.read()[0] + lineFollow.read()[1] + lineFollow()[2])
-	left = (lineFollow.read()[3] + lineFollow.read()[4] + lineFollow()[5])
+	right = (lineFollow.read()[0] + lineFollow.read()[1] + lineFollow.read()[2])
+	left = (lineFollow.read()[3] + lineFollow.read()[4] + lineFollow.read()[5])
  
 	if(right > left):
 		GPG.set_motor_power(GPG.MOTOR_LEFT, 50)
