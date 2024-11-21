@@ -1,7 +1,7 @@
 import time
 import gopigo3
 from search import find
-import easygopigo3 as easy_gpg
+import easygopigo3 as easy
 easy_gpg = easy.EasyGoPiGo3()
 servo1 = easy_gpg.init_servo("SERVO1")
 servo2 = easy_gpg.init_servo("SERVO2")
@@ -12,9 +12,9 @@ lineFollow = easy_gpg.init_line_follower("AD1")
 
 while True:
 	if 1 not in lineFollow.read("bivariate"):
-		GPG.set_motor_power(GPG.MOTOR_LEFT + GPG.MOTOR.RIGHT, 100)
+		GPG.set_motor_power(GPG.MOTOR_LEFT + GPG.MOTOR_RIGHT, 100)
 	else:
-		GPG.set_motor_power(GPG.MOTOR_LEFT + GPG.MOTOR.RIGHT, 0)
+		GPG.set_motor_power(GPG.MOTOR_LEFT + GPG.MOTOR_RIGHT, 0)
 		break
 
 
